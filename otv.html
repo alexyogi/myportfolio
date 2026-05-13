@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over Terrain Vehicle — Alex Yogiaveetil</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/projects/navapp.css">
+  <link rel="stylesheet" href="css/projects/otv.css">
+</head>
+<body>
+  <header id="header">
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item-left"><a href="index.html">Alex Yogiaveetil</a></li>
+        <li class="nav-caption">InfoDesign Student</li>
+        <div class="right-nav">
+          <li class="nav-item"><a href="resume.html">Resume</a></li>
+          <li class="nav-item"><a href="photo.html">Photography</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="page-hero fade-in">
+      <a href="projects.html" class="back-link">← Projects</a>
+      <h1>Over Terrain Vehicle</h1>
+      <p>Engineering Design · Robotics · January–May 2023</p>
+    </div>
+
+    <!-- Background + Mission -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Overview</span></div>
+      <div class="case-two-col">
+        <div class="case-block">
+          <h2 class="case-heading">Mission Background</h2>
+          <p class="case-body">During descent, one of the payloads was damaged and released a hazardous material. However, there is important data stored on the payload that must be extracted and analyzed within 24 hours of landing. The payload's data is stored on an Arduino that has output ports for data transmission.</p>
+        </div>
+        <div class="case-block">
+          <h2 class="case-heading">Mission Objectives</h2>
+          <ul class="case-list">
+            <li>Navigate to within 150 mm of the pylon</li>
+            <li>Physically connect to both of the pylon output ports</li>
+            <li>Extract and correctly transmit the duty cycle of the signal square wave to within 5%</li>
+            <li>Identify and transmit the magnetism of material in the base of the pylon</li>
+            <li>Navigate completely past the three obstacles</li>
+            <li>Navigate completely into the destination zone</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-img-full" style="margin-top: 2rem; max-width: 400px;">
+        <img src="images/otv/pylon.png" alt="Pylon">
+      </div>
+    </section>
+
+    <!-- Requirements + Challenges -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Requirements</span></div>
+      <div class="case-two-col">
+        <div class="case-block">
+          <h2 class="case-heading">Vehicle Requirements</h2>
+          <ul class="case-list">
+            <li>Total OTV mass must be no heavier than 3 kg</li>
+            <li>Pre-built chassis assemblies limited to at most two function categories</li>
+            <li>No building-systems or robotics kits (Lego, Vex, etc.)</li>
+            <li>Aruco tracking marker (50–100mm) with 15mm white border on top of vehicle</li>
+            <li>No exposed sharp objects permitted</li>
+            <li>Total as-built replacement cost under $320</li>
+          </ul>
+          <div class="case-img-full" style="margin-top: 1.25rem; max-width: 220px;">
+            <img src="images/otv/aruco2.gif" alt="Aruco marker">
+          </div>
+        </div>
+        <div class="case-block">
+          <h2 class="case-heading">Key Challenges</h2>
+          <ul class="case-list">
+            <li>Making the chassis sturdy while allowing some give for shock and vibration absorption</li>
+            <li>Supporting the weight of the arm, propulsion, and electronics without chassis flex</li>
+            <li>Allowing a smooth and generous turning radius when cornering</li>
+            <li>Accurately placing the arm over the pylon for lowering</li>
+            <li>Lining up the data connections precisely</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Justification -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Design</span></div>
+      <h2 class="case-heading">Design Justification</h2>
+      <p class="case-body case-body--wide">The mission utilizes a data extraction arm controlled by a single servo motor which raises and lowers the arm into and out of the pylon. The arm is 3D-printed from PLA plastic and attached inside a printed vertical rail, interacting with a gear to form a rack-and-pinion system for vertical translation. A hall magnetic sensor determines the magnetism of the puck at the base of the pylon, while copper wiring attached to the arm contacts the data outputs and transmits voltage to the Arduino. This data is wirelessly transmitted via a WiFi module to the ENES lab computer.</p>
+      <div class="case-img-two" style="margin-top: 1.5rem;">
+        <img src="images/otv/data-arm.png" alt="Data arm">
+        <img src="images/otv/triangle.png" alt="Triangular cutout">
+      </div>
+    </section>
+
+    <!-- Materials -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Design</span></div>
+      <h2 class="case-heading">Materials & Construction</h2>
+      <div class="case-two-col">
+        <div class="case-block">
+          <h3 class="case-subheading">Plywood Birch Sheets</h3>
+          <ul class="case-list">
+            <li>Used for the chassis structure</li>
+            <li>Purchased in sheets and cut to exact dimensions</li>
+            <li>Attachment holes drilled to precise specifications</li>
+          </ul>
+          <h3 class="case-subheading" style="margin-top: 1.5rem;">PLA Filament</h3>
+          <ul class="case-list">
+            <li>Rendered in CAD and 3D printed</li>
+            <li>Used for custom mission components</li>
+          </ul>
+        </div>
+        <div class="case-block">
+          <h3 class="case-subheading">Ordered Parts</h3>
+          <ul class="case-list">
+            <li>Tires, motors, sensors, and electronics</li>
+            <li>Fasteners and hardware for assembly</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chassis -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Design</span></div>
+      <h2 class="case-heading">Chassis Design</h2>
+      <p class="case-body case-body--wide">I was on the chassis subteam, focusing on the design and prototyping of the vehicle chassis. The chassis provides space for electronics connected to the arm and wheels, as well as an Arduino mount. The design includes four extensions to house four motors for four-wheel drive. The trapezoidal cutout serves to guide the pylon into position and gives the arm space to lower for data extraction.</p>
+      <div class="case-img-two" style="margin-top: 1.5rem;">
+        <img src="images/otv/chassis-drawing1.png" alt="Chassis drawing 1">
+        <img src="images/otv/chassis-drawing2.png" alt="Chassis drawing 2">
+      </div>
+      <div class="case-img-two" style="margin-top: 2px;">
+        <img src="images/otv/chassis-cad.png" alt="Chassis CAD">
+        <img src="images/otv/primary-cad.png" alt="Primary CAD">
+      </div>
+      <div class="case-img-two" style="margin-top: 2px;">
+        <img src="images/otv/front-cad.png" alt="Front isometric">
+        <img src="images/otv/back-cad.png" alt="Back isometric">
+      </div>
+      <p class="case-body case-body--wide case-caption">Rendering of the final design with upgraded chassis.</p>
+    </section>
+
+    <!-- Other Components -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Design</span></div>
+      <h2 class="case-heading">Other Integral Components</h2>
+      <div class="case-two-col">
+        <div class="case-block">
+          <h3 class="case-subheading">Large Wheels</h3>
+          <div class="case-img-two" style="margin-bottom: 1rem;">
+            <img src="images/otv/wheels.png" alt="Wheel CAD">
+            <img src="images/otv/wheels-amazon.png" alt="Wheels">
+          </div>
+          <p class="case-body">The data extraction arm made the vehicle tall, so we chose to go over the hump obstacle rather than under a beam. We designed the OTV with large all-terrain tires for high ground clearance and confident obstacle traversal, ordered from Amazon.</p>
+        </div>
+        <div class="case-block">
+          <h3 class="case-subheading">Ultrasonic Sensor</h3>
+          <div class="case-img-two" style="margin-bottom: 1rem;">
+            <img src="images/otv/sensor.png" alt="Sensor CAD">
+            <img src="images/otv/sensor2.png" alt="Sensor diagram">
+          </div>
+          <p class="case-body">Placed on the opposite side from the arm to avoid interference, the ultrasonic sensor allows the vehicle to detect objects and measure distance — used for navigating around course obstacles by driving "backwards" through that section.</p>
+        </div>
+      </div>
+      <div class="case-two-col" style="margin-top: 3rem;">
+        <div class="case-block">
+          <h3 class="case-subheading">Motors</h3>
+          <div class="case-img-two" style="margin-bottom: 1rem;">
+            <img src="images/otv/motor.png" alt="Motor">
+            <img src="images/otv/hex.png" alt="Hex adapter">
+          </div>
+          <p class="case-body">We used Pololu motors paired with 12mm hex wheel adapters to make them compatible with the large wheels we selected. The adapters screw onto the motor gearshaft and connect directly to the wheels.</p>
+        </div>
+        <div class="case-block">
+          <h3 class="case-subheading">Motor Mount Redesign</h3>
+          <div class="case-img-full" style="margin-bottom: 1rem;">
+            <img src="images/otv/otv-motormount.png" alt="Motor mount">
+          </div>
+          <div class="case-img-two" style="margin-bottom: 1rem;">
+            <img src="images/otv/motor+mount.png" alt="Motor and mount">
+            <img src="images/otv/motormount-closeup.png" alt="Mount closeup">
+          </div>
+          <p class="case-body">During assembly, the motor fit loosely within the initial mount once physical motors arrived. The opening diameter and contact surfaces were adjusted to reduce excess clearance and improve alignment — reinforcing the importance of validating CAD assumptions against real components.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Build -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Build & Testing</span></div>
+      <h2 class="case-heading">Final OTV Build</h2>
+      <div class="case-img-two">
+        <img src="images/otv/otv-finalbuild.png" alt="Final build">
+        <img src="images/otv/otv-finalbuild2.png" alt="Final build 2">
+      </div>
+      <div class="case-img-two" style="margin-top: 2px;">
+        <img src="images/otv/otv-pylon.png" alt="OTV at pylon">
+        <img src="images/otv/otv-pylon2.png" alt="OTV at pylon 2">
+      </div>
+      <div class="case-img-two" style="margin-top: 2px;">
+        <img src="images/otv/otv-ia1.png" alt="OTV in action">
+        <img src="images/otv/otv-ia2.png" alt="OTV in action 2">
+      </div>
+      <p class="case-body case-body--wide case-caption">The completed prototype during assembly and testing, showcasing integration of the mechanical frame, drive system, electronics, and sensors. Tested in a controlled environment with obstacles to evaluate mobility, stability, and structural integrity.</p>
+    </section>
+
+    <!-- Performance + Conclusion -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Results</span></div>
+      <h2 class="case-heading">Final Performance Assessment</h2>
+      <div class="case-video">
+        <video controls muted playsinline preload="metadata">
+          <source src="images/otv/otv-performancetest.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="case-body case-body--wide case-caption">During preliminary testing, the vehicle performed as intended. However, on the final assessment day, an issue arose with one of the front wheels that prevented the vehicle from turning correctly. The OTV was unable to properly reach the pylon as intended. Despite this setback, the test highlighted the importance of mechanical robustness and real-time reliability under mission conditions.</p>
+    </section>
+
+    <!-- Reflection -->
+    <section class="case-section fade-in">
+      <div class="section-rule"><span class="section-label">Conclusion</span></div>
+      <h2 class="case-heading">Reflection</h2>
+      <div class="case-two-col">
+        <div class="case-block">
+          <div class="case-img-full">
+            <img src="images/otv/otvposter.png" alt="OTV poster">
+          </div>
+          <p class="case-body case-caption">Final Project Poster summarizing the design, construction, control algorithm, and performance results.</p>
+        </div>
+        <div class="case-block">
+          <p class="case-body">This project emphasized the importance of iterative design, system integration, and validating assumptions through real-world testing. While the vehicle performed well during preliminary trials, the final assessment highlighted how small mechanical issues can significantly impact mission success.</p>
+          <p class="case-body">With additional time, the front wheel issue could have been resolved through further iteration and testing. Overall, the project reinforced the value of designing for robustness, tolerances, and long-term reliability in mission-driven engineering systems.</p>
+          <a href="images/otv/MS9 Final Design Brief.pdf" class="btn" target="_blank" style="margin-top: 1rem;">Download Design Brief (PDF)</a>
+        </div>
+      </div>
+      <div class="case-nav">
+        <a href="projects.html" class="btn">← All Projects</a>
+        <a href="sewing.html" class="btn">Next Project <span class="btn-arrow">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="footer-copy">© 2025 Alex Yogiaveetil</p>
+    <ul class="footer-links">
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="photo.html">Photography</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

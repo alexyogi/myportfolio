@@ -1,0 +1,65 @@
+/* ── OTV PAGE — image overrides ── */
+
+/* Aruco GIF — small and centered, no crop */
+.otv-aruco {
+  max-width: 220px;
+  margin-top: 1.25rem;
+  background: var(--bg2);
+  line-height: 0;
+}
+.otv-aruco img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Pylon photo — capped width */
+.otv-pylon-img {
+  max-width: 360px;
+  margin-top: 1.5rem;
+  background: var(--bg2);
+  line-height: 0;
+}
+.otv-pylon-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Technical diagrams + CAD drawings — contain, no crop */
+.case-img-two.drawings img,
+.case-img-three.drawings img {
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  padding: 1.25rem;
+  background: var(--bg2);
+}
+
+/* Motor mount — three images */
+.case-img-three.motor-mount img {
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  padding: 1rem;
+  background: var(--bg2);
+}
+
+/* Final build photos — natural crop */
+.case-img-two.build-photos img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Poster — full width, contain */
+.otv-poster {
+  width: 100%;
+  background: var(--bg2);
+  line-height: 0;
+}
+.otv-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  padding: 1rem;
+}
